@@ -31,16 +31,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'web-console', '~> 2.0', group: :development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
+
   gem 'spring'
   gem 'sqlite3'
 end
 
 group :test do
+  gem 'guard'
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   gem 'guard-minitest'
