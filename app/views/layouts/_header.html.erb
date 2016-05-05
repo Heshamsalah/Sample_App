@@ -1,0 +1,12 @@
+<header class="navbar navbar-fixed-top navbar-inverse"> <!-- <header> is an HTML5 div, as well as nav and section -->
+  <div class="container">
+    <%= link_to "sample app", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav nav-pills navbar-nav navbar-left">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "Login", '#' %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
