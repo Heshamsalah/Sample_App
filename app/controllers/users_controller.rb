@@ -14,10 +14,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params) #user_params here is a strong parameter
     if @user.save
       # Handle a successful save.
+      log_in @user # log the user in
       flash[:success] = "Welcome to Social Network!"
       redirect_to @user #redirect to the "user name" show page
     else
-      render 'new' #show the new page again
+      redirect_to signup_path
+      #render 'new' #show the new page again
     end
   end
 
