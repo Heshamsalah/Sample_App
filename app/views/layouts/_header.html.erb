@@ -5,7 +5,13 @@
       <ul class="nav nav-pills navbar-nav navbar-left">
         <li>
           <% if logged_in? %>
-            <%= link_to "#{profile_username}", current_user %>
+          <%= gravatar_for(current_user,50) %>
+          <% end %>
+        </li>
+        <li>
+          <% if logged_in? %>
+
+          <%= link_to "#{profile_username}", current_user %>
           <% end %>
         </li>
         <li><%= link_to "Home", root_path %></li>
